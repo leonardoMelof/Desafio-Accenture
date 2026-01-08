@@ -1,0 +1,38 @@
+{
+  "name": "novo2",
+  "version": "1.0.0",
+  "description": "",
+  "license": "ISC",
+  "author": "",
+  "type": "commonjs",
+  "main": "index.js",
+  "scripts": {
+    "test": "cypress run",
+    "cypress:run": "cypress run",
+    "cypress:run:specific": "cypress run --spec cypress/e2e/seu_arquivo.cy.js",
+    "test:run": "cypress run",
+    "report:generate": "node cucumber-report.js",
+    "test:full": "npm run test:run && npm run report:generate"
+  },
+  "devDependencies": {
+    "@4tw/cypress-drag-drop": "^2.3.1",
+    "@bahmutov/cypress-esbuild-preprocessor": "^2.2.8",
+    "@cypress/browserify-preprocessor": "^3.0.2",
+    "@faker-js/faker": "^10.2.0",
+    "cypress": "^12.17.2",
+    "cypress-cucumber-preprocessor": "^4.3.1",
+    "esbuild": "^0.27.2",
+    "multiple-cucumber-html-reporter": "^3.9.3"
+  },
+  "cypress-cucumber-preprocessor": {
+    "nonGlobalStepDefinitions": true,
+    "stepDefinitions": "cypress/e2e/step_definitions",
+    "common_definitions": "cypress/e2e/step_definitions/common",
+    "cucumberJson": {
+    "generate": true,
+    "outputFolder": "cypress/cucumber-json",
+    "filePrefix": "",
+    "fileSuffix": ".cucumber"
+    }
+  }
+}

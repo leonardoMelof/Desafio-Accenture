@@ -1,0 +1,72 @@
+[
+  {
+    "keyword": "Feature",
+    "name": "BookStore API",
+    "line": 1,
+    "id": "bookstore-api",
+    "tags": [],
+    "uri": "apiBookStore.feature",
+    "elements": [
+      {
+        "id": "bookstore-api;fluxo-completo-de-criação-de-usuário-e-reserva-de-livros",
+        "keyword": "Scenario",
+        "line": 3,
+        "name": "Fluxo completo de criação de usuário e reserva de livros",
+        "tags": [],
+        "type": "scenario",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 4,
+            "name": "que gero dados aleatórios para um novo usuário da API",
+            "result": {
+              "status": "passed",
+              "duration": 78000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 5,
+            "name": "realizo o fluxo de criação e autorização do usuário",
+            "result": {
+              "status": "passed",
+              "duration": 2698000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 6,
+            "name": "seleciono dois livros disponíveis na BookStore",
+            "result": {
+              "status": "passed",
+              "duration": 224000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 7,
+            "name": "alugo os livros com sucesso",
+            "result": {
+              "status": "passed",
+              "duration": 395000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 8,
+            "name": "listo os detalhes do usuário para confirmar a reserva final",
+            "result": {
+              "status": "passed",
+              "duration": 317000000
+            }
+          }
+        ]
+      }
+    ]
+  }
+]
