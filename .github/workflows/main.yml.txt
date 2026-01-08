@@ -1,0 +1,26 @@
+name: CI Accenture
+
+on: [push]
+
+jobs:
+  execucao-cypress:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Baixando o Código
+        uses: actions/checkout@v4
+
+      - name: Instalando Dependencias
+        run: npm install
+
+      - name: Executando Testes
+        run: npx cypress run
+        continue-on-error: true # Garante que o relatório seja gerado mesmo se o teste falhar
+
+      - name: Gerando Relatorio HTML
+        run: node cucumber-report.js
+
+      - name: Salvando Relatorio como Artefato
+        uses: actions/upload-artifact@v4
+        with:
+          name: relatorio-final-accenture
+          path: cypress/reports/cucumber-htmlreport/

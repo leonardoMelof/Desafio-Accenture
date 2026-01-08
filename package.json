@@ -12,7 +12,9 @@
     "cypress:run:specific": "cypress run --spec cypress/e2e/seu_arquivo.cy.js",
     "test:run": "cypress run",
     "report:generate": "node cucumber-report.js",
-    "test:full": "npm run test:run && npm run report:generate"
+    "test:full": "npm run test:run && npm run report:generate",
+    "test:ci": "cypress run",
+    "ci": "npm run test:ci && npm run report:generate"
   },
   "devDependencies": {
     "@4tw/cypress-drag-drop": "^2.3.1",
